@@ -1,0 +1,15 @@
+.board {
+  display: grid;
+  width: 150px;
+  height: 150px;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  border: 2px solid;
+  text-align: center;
+}
+
+.box{
+  border: 2px solid;
+  padding: 10px;
+  position: relative;
+}
