@@ -13,7 +13,8 @@ document.getElementById("box9").addEventListener("click", makeMove);
 function makeMove(){
  if (document.getElementById(this.id).innerHTML == ' ') {
     document.getElementById(this.id).innerHTML = turn;
-    checkForWin();
+    let winner = checkForWin();
+    if (winner == true) declareWinner();
     turn === 'X' ? turn = 'O' : turn = 'X';
     document.getElementById("currentTurn").innerHTML = turn;
   }
@@ -29,16 +30,6 @@ function checkForWin(){
   let box7 = document.getElementById('box7').innerHTML;
   let box8 = document.getElementById('box8').innerHTML;
   let box9 = document.getElementById('box9').innerHTML;
-  // test code
-console.log(box1);
-console.log(box2);
-console.log(box3);
-console.log(box4);
-console.log(box5);
-console.log(box6);
-console.log(box7);
-console.log(box8);
-console.log(box9);
     //win conidtions
      if ((box1 === box2 && box2 === box3 && box1 !== ' ' ) ||
         (box4 === box5 && box5 === box6 && box4 !== ' ') ||
@@ -49,8 +40,15 @@ console.log(box9);
         (box1 === box5 && box5 === box9 && box1 !== ' ') ||
         (box3 === box5 && box5 === box7 && box3 !== ' '))
 
-      {
+      {return true;}
+    }
+
+function declareWinner() {
         document.getElementById('turn').innerHTML = turn + " wins!";
+        removeListeners();
+      }
+      
+function removeListeners() {
         document.getElementById("box1").removeEventListener("click", makeMove);
         document.getElementById("box2").removeEventListener("click", makeMove);
         document.getElementById("box3").removeEventListener("click", makeMove);
@@ -60,6 +58,4 @@ console.log(box9);
         document.getElementById("box7").removeEventListener("click", makeMove);
         document.getElementById("box8").removeEventListener("click", makeMove);
         document.getElementById("box9").removeEventListener("click", makeMove);
-
-    }
-  }
+      }
