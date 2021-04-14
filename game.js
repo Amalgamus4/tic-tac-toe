@@ -42,6 +42,7 @@ function checkForWin(){
 
       {
         document.getElementById('turn').innerHTML = turn + " wins!";
+        removeListeners();
       }
     }
 
