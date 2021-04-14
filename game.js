@@ -1,7 +1,20 @@
 var turn = 'X';
+<<<<<<< HEAD
 for (i = 1; i < 9; i++){
 document.getElementById("box" + i).addEventListener("click", makeMove);
 }
+=======
+
+document.getElementById("box1").addEventListener("click", makeMove);
+document.getElementById("box2").addEventListener("click", makeMove);
+document.getElementById("box3").addEventListener("click", makeMove);
+document.getElementById("box4").addEventListener("click", makeMove);
+document.getElementById("box5").addEventListener("click", makeMove);
+document.getElementById("box6").addEventListener("click", makeMove);
+document.getElementById("box7").addEventListener("click", makeMove);
+document.getElementById("box8").addEventListener("click", makeMove);
+document.getElementById("box9").addEventListener("click", makeMove);
+>>>>>>> 678deaf1d3be898778d5d5083db925a23e7aa4d0
 
 function makeMove(){
  if (document.getElementById(this.id).innerHTML == ' ') {
@@ -40,9 +53,23 @@ function declareWinner() {
         document.getElementById('turn').innerHTML = turn + " wins!";
         removeListeners();
       }
+<<<<<<< HEAD
 
 function removeListeners() {
   for (i = 1; i < 9; i++){
         document.getElementById("box" + i).removeEventListener("click", makeMove);
         }
+=======
+      
+function removeListeners() {
+        document.getElementById("box1").removeEventListener("click", makeMove);
+        document.getElementById("box2").removeEventListener("click", makeMove);
+        document.getElementById("box3").removeEventListener("click", makeMove);
+        document.getElementById("box4").removeEventListener("click", makeMove);
+        document.getElementById("box5").removeEventListener("click", makeMove);
+        document.getElementById("box6").removeEventListener("click", makeMove);
+        document.getElementById("box7").removeEventListener("click", makeMove);
+        document.getElementById("box8").removeEventListener("click", makeMove);
+        document.getElementById("box9").removeEventListener("click", makeMove);
+>>>>>>> 678deaf1d3be898778d5d5083db925a23e7aa4d0
       }
