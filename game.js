@@ -1,9 +1,12 @@
 var turn = 'X';
 <<<<<<< HEAD
+<<<<<<< HEAD
 for (i = 1; i < 9; i++){
 document.getElementById("box" + i).addEventListener("click", makeMove);
 }
 =======
+=======
+>>>>>>> parent of a24dcd8 (Refactor code)
 
 document.getElementById("box1").addEventListener("click", makeMove);
 document.getElementById("box2").addEventListener("click", makeMove);
@@ -14,7 +17,10 @@ document.getElementById("box6").addEventListener("click", makeMove);
 document.getElementById("box7").addEventListener("click", makeMove);
 document.getElementById("box8").addEventListener("click", makeMove);
 document.getElementById("box9").addEventListener("click", makeMove);
+<<<<<<< HEAD
 >>>>>>> 678deaf1d3be898778d5d5083db925a23e7aa4d0
+=======
+>>>>>>> parent of a24dcd8 (Refactor code)
 
 function makeMove(){
  if (document.getElementById(this.id).innerHTML == ' ') {
@@ -54,6 +60,7 @@ function declareWinner() {
         removeListeners();
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 function removeListeners() {
   for (i = 1; i < 9; i++){
@@ -62,6 +69,10 @@ function removeListeners() {
 =======
       
 function removeListeners() {
+=======
+      
+function removeListeners() {
+>>>>>>> parent of a24dcd8 (Refactor code)
         document.getElementById("box1").removeEventListener("click", makeMove);
         document.getElementById("box2").removeEventListener("click", makeMove);
         document.getElementById("box3").removeEventListener("click", makeMove);
@@ -71,5 +82,8 @@ function removeListeners() {
         document.getElementById("box7").removeEventListener("click", makeMove);
         document.getElementById("box8").removeEventListener("click", makeMove);
         document.getElementById("box9").removeEventListener("click", makeMove);
+<<<<<<< HEAD
 >>>>>>> 678deaf1d3be898778d5d5083db925a23e7aa4d0
+=======
+>>>>>>> parent of a24dcd8 (Refactor code)
       }
