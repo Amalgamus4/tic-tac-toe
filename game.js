@@ -1,14 +1,10 @@
 var turn = 'X';
+const boxes = document.querySelectorAll('.box');
 
-document.getElementById("box1").addEventListener("click", makeMove);
-document.getElementById("box2").addEventListener("click", makeMove);
-document.getElementById("box3").addEventListener("click", makeMove);
-document.getElementById("box4").addEventListener("click", makeMove);
-document.getElementById("box5").addEventListener("click", makeMove);
-document.getElementById("box6").addEventListener("click", makeMove);
-document.getElementById("box7").addEventListener("click", makeMove);
-document.getElementById("box8").addEventListener("click", makeMove);
-document.getElementById("box9").addEventListener("click", makeMove);
+boxes.forEach((div) => {
+  div.addEventListener('click', makeMove);
+});
+
 
 function makeMove(){
  if (document.getElementById(this.id).innerHTML == ' ') {
@@ -48,13 +44,7 @@ function checkForWin(){
 
 function removeListeners() {
 
-        document.getElementById("box1").removeEventListener("click", makeMove);
-        document.getElementById("box2").removeEventListener("click", makeMove);
-        document.getElementById("box3").removeEventListener("click", makeMove);
-        document.getElementById("box4").removeEventListener("click", makeMove);
-        document.getElementById("box5").removeEventListener("click", makeMove);
-        document.getElementById("box6").removeEventListener("click", makeMove);
-        document.getElementById("box7").removeEventListener("click", makeMove);
-        document.getElementById("box8").removeEventListener("click", makeMove);
-        document.getElementById("box9").removeEventListener("click", makeMove);
-      }
+  boxes.forEach((div) => {
+    div.removeEventListener('click', makeMove);
+  });
+}
