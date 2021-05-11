@@ -21,11 +21,10 @@
   position: absolute;
   top: 60px;
   left: 0px;
-  border: 1px solid black;
 }
 
 #turn {
   position: absolute;
-  top: 220px;
+  top: 225px;
   left: 20px;
 }
