@@ -4,11 +4,15 @@ const boxes = document.querySelectorAll(".box");
 boxes.forEach((div) => div.addEventListener("click", makeMove));
 
 function makeMove() {
-  document.getElementById(this.id).textContent = turn;
-  checkForWin();
-  turn === "X" ? (turn = "O") : (turn = "X");
-  if (gameOver == false) {
-    document.getElementById("currentTurn").textContent = turn;
+  let thisDiv = document.getElementById(this.id);
+  if ((thisDiv.textContent = "  ")) {
+    thisDiv.textContent = turn;
+    thisDiv.removeEventListener("click", makeMove);
+    checkForWin();
+    turn === "X" ? (turn = "O") : (turn = "X");
+    if (gameOver == false) {
+      document.getElementById("currentTurn").textContent = turn;
+    }
   }
 }
 
